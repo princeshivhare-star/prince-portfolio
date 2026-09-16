@@ -3,7 +3,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Linkedin, Mail, ArrowRight, MessageSquare, Zap } from "lucide-react";
+import { Linkedin, Mail, ArrowRight, MessageSquare, Zap, MessageCircle } from "lucide-react";
+
+const whatsappUrl =
+  "https://wa.me/919752383672?text=Hi%20Prince%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.";
 
 export default function Contact() {
   const ref = useRef(null);
@@ -74,6 +77,15 @@ export default function Contact() {
           >
             <Mail size={20} />
             Send an Email
+          </a>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-[#25D366] text-white font-semibold text-base transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20bd5a] hover:shadow-lg hover:shadow-green-500/20"
+          >
+            <MessageCircle size={20} />
+            Chat on WhatsApp
           </a>
         </motion.div>
 
